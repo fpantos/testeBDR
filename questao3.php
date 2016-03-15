@@ -9,12 +9,12 @@ class MyUserClass
         $query = "select name from user order by name";
 
         $dbconn = new DatabaseConnection($host, $user, $pass);
-        if(!$dbconn) {
+        if (!$dbconn) {
             die('Could not connect: ' . mysql_error());
         }
 
         $results = $dbconn->query($query); 
-        if(!$results) {
+        if (!$results) {
             die('Could not get data: ' . mysql_error());
         }
 
